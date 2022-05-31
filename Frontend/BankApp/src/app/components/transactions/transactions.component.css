@@ -1,0 +1,96 @@
+.transactions {
+    margin: 20px 0 0 50px;
+}
+
+
+.image {
+    width: 30px;
+    height: 30px;
+    margin: 2px 0 5px 85px;
+}
+
+.product {
+    display: flex;
+    margin: 5px;
+}
+
+.meta {
+    display: flex;
+    margin-top: 5px;
+    font-size: 12px;
+    color: grey
+}
+
+p {
+    margin: 0px;
+}
+
+.description {
+    padding-left: 20px;
+}
+
+.productName {
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.time {
+    font-size: 12px;
+    color: grey;
+    margin-top: 3px;
+}
+
+.price {
+    font-weight: 700;
+    text-align: right;
+    margin-left: 85px;
+    font-size: 17px;
+}
+
+.day {
+    font-size: 14px;
+    color: grey;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+.deposit {
+    font-weight: 700;
+    text-align: right;
+    margin-left: 90px;
+    font-size: 16px;
+    color: rgb(38, 177, 38);
+}
+
+table {
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.flexer {
+    display: flex;
+    width: 600px;
+}
+
+.more {
+    margin-left: 400px;
+    margin-bottom: 20px;
+    padding: 20px 5px 0px 0px;
+    font-size: 12px;
+}
+
+.more:hover {
+    color: grey;
+    cursor: pointer;
+}
+
+.arrow {
+    padding-top: 22px;
+    padding-left: 1px;
+    width: 10px;
+    height: 10px;
+}

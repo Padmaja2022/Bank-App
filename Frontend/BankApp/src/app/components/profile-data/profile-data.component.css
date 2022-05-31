@@ -1,0 +1,122 @@
+h2 {
+    margin: 15px;
+    font-size: 14px;
+    padding-top: 20px;
+}
+
+.savings {
+    background: #f8f8f8;
+    width: 300px;
+    margin-left: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    height: 65px;
+    padding-top: 5px;
+}
+
+.goal {
+    padding: 10px 0 0 20px;
+    font-size: 12px;
+    color: grey;
+    margin: 0;
+}
+
+.amount {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 0px 0 0 20px;
+    margin-top: 5px;
+}
+
+.flex {
+    display: flex;
+}
+
+.image {
+    width: 30px;
+    height: 30px;
+    margin: 15px 0 5px 20px;
+}
+
+.image1 {
+    width: 30px;
+    height: 30px;
+    margin: 15px 5px 5px 15px;
+}
+
+.table {
+    margin: auto;
+}
+
+.column {
+    margin: 10px;
+    border-radius: 5px;
+    background: #f8f8f8a4;
+    padding: 5px 25px 8px 25px;
+}
+
+.column:hover {
+    box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.1);
+}
+
+.subscription, .price, .duration {
+    margin: auto;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    text-align: center;
+}
+
+th {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    text-align: left;
+}
+
+.price {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.subscription {
+    padding: 8px 0 5px 0
+}
+
+.whitespace {
+    margin-top: 0px;
+}
+
+.upcoming {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.income {
+    font-weight: 600;
+    font-size: 15px;
+    color: rgb(38, 177, 38);
+    margin: auto;
+    text-align: center;
+}
+
+.spotify {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    margin: 8px 10px 5px 10px;
+}
+
+.hbo {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    margin: 8px 10px 5px 10px;
+}
+
+.pay {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    margin: 8px 10px 5px 10px;
+}

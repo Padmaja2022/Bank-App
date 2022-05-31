@@ -1,0 +1,49 @@
+.app {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar {
+    background-color: #000000;
+    width: 70px;
+    height: 100%;
+    text-align: center;
+}
+
+.logo {
+    height: 30px;
+    margin-top: 30px;
+    transition: margin-top 2s;
+    cursor: pointer;
+}
+
+.logo:hover {
+    cursor: pointer;
+    opacity: 70%;
+}
+
+.logo:active {
+    height: 30px;
+    margin-top: 550px;
+    transform: rotateX(180deg)
+}
+
+.text {
+    margin-top: 20px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+.whitespace {
+    height: 50px;
+}
+
+.bill {
+    height: 25px;
+}
+
+.bill:hover {
+    cursor: pointer;
+    opacity: 70%;
+}
