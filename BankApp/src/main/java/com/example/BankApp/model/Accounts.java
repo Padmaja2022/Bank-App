@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 
 //import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -24,7 +25,7 @@ import lombok.Setter;
 @AllArgsConstructor
 
 @Data
-@Getter
+@Getter 
 @Setter
 public class Accounts {
 
