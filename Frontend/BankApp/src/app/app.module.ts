@@ -7,6 +7,9 @@ import { CardComponent } from './components/card/card.component';
 import { TransactionsComponent } from './components/transactions/transactions.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ProfileDataComponent } from './components/profile-data/profile-data.component';
+import { SignupUpPageComponent } from './components/signup-up-page/signup-up-page.component';
+import { LoginPageComponent } from './components/login-page/login-page.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { ProfileDataComponent } from './components/profile-data/profile-data.com
     CardComponent,
     TransactionsComponent,
     ProfileComponent,
-    ProfileDataComponent
+    ProfileDataComponent,
+    SignupUpPageComponent,
+    LoginPageComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule
