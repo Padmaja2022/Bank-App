@@ -10,6 +10,8 @@ import { ProfileDataComponent } from './components/profile-data/profile-data.com
 import { SignupUpPageComponent } from './components/signup-up-page/signup-up-page.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { HomeComponent } from './components/home/home.component';
+import {Routes, RouterModule} from '@angular/router';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { HomeComponent } from './components/home/home.component';
     HomeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
