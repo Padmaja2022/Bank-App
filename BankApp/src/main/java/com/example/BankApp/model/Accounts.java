@@ -37,18 +37,36 @@ public class Accounts {
 	private long id;
 		
 
-	@Column(name="firstName")
+	@Column(name="first_Name")
 	private String firstName;
 	
-	@Column(name="lastName")
+	@Column(name="last_Name")
 	private String lastName;
 
 	@Column(name="email")
 	private String email;
 
-	@Column(name="phoneNumber")
+	@Column(name="phone_Number")
 	private String phoneNumber ;
-
 	
+	@Column(name="ssn")
+	private String ssn;
+	
+	@Column(name="account_Number")
+	private String accountNumber;
+	
+	@Column(name="balance")
+	private double balance;
+		
+	private static int index = 10000;
+
+private String setAccountNumber() {
+
+	String lastTwoOfSSN = ssn.substring(ssn.length() - 2, ssn.length());
+	int uniqueID = index;
+	int randomNumber = (int) (Math.random() * Math.pow(10, 3));
+	return lastTwoOfSSN + uniqueID + randomNumber;
+
 }
 
+}
