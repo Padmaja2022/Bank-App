@@ -22,11 +22,6 @@
     opacity: 70%;
 }
 
-.logo:active {
-    height: 30px;
-    margin-top: 550px;
-    transform: rotateX(180deg)
-}
 
 .text {
     margin-top: 20px;
