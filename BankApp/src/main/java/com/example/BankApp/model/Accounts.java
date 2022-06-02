@@ -33,7 +33,7 @@ public class Accounts {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name ="id")
+	@Column(name ="accid")
 
 	private long id;
 		
