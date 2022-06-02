@@ -2,6 +2,8 @@ package com.example.BankApp.model;
 
 
 
+import java.time.LocalDate;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,8 +23,6 @@ import lombok.Setter;
 
 @Entity
 @Table(name="Account")
-@NoArgsConstructor
-@AllArgsConstructor
 
 @Data
 @Getter 
@@ -31,11 +31,34 @@ public class Accounts {
 
 	 
 	
+	/**
+	 * @param id
+	 * @param firstName
+	 * @param lastName
+	 * @param email
+	 * @param phoneNumber
+	 * @param ssn
+	 * @param accountNumber
+	 * @param balance
+	 */
+	public Accounts(long id, String firstName, String lastName, String email, String phoneNumber, String ssn,
+			String accountNumber, double balance) {
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.phoneNumber = phoneNumber;
+		this.ssn = ssn;
+		this.accountNumber = setAccountNumber();
+		this.balance = balance;
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name ="accid")
 
 	private long id;
+	
 		
 
 	@Column(name="first_Name")
@@ -61,13 +84,13 @@ public class Accounts {
 		
 	private static int index = 10000;
 
-private String setAccountNumber() {
+	private String setAccountNumber() {
 
-	String lastTwoOfSSN = ssn.substring(ssn.length() - 2, ssn.length());
-	int uniqueID = index;
-	int randomNumber = (int) (Math.random() * Math.pow(10, 3));
-	return lastTwoOfSSN + uniqueID + randomNumber;
+		String lastTwoOfSSN = ssn.substring(ssn.length() - 2, ssn.length());
+		int uniqueID = index;
+		int randomNumber = (int) (Math.random() * Math.pow(10, 3));
+		return lastTwoOfSSN + uniqueID + randomNumber;
 
-}
+	}
 
 }
