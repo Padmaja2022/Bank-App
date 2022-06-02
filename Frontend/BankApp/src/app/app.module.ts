@@ -33,3 +33,11 @@ import {Routes, RouterModule} from '@angular/router';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+const routes: Routes = [
+  {path:"", redirectTo:"login", pathMatch:"full"},
+  {path:"login", component:LoginPageComponent},
+  {path:"signUp", component:SignupUpPageComponent},
+  {path:"home", component:HomeComponent},
+];
+
