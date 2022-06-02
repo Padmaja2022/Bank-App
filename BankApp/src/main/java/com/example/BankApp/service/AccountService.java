@@ -1,11 +1,12 @@
 package com.example.BankApp.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.example.BankApp.model.Accounts;
 import com.example.BankApp.repository.AccountRepository;
 
-
+@Service
 public class AccountService extends Accounts {
 
 @Autowired
