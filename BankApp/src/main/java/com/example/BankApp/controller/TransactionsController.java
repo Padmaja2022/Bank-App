@@ -23,7 +23,7 @@ public class TransactionsController {
 	
 	//create new transactions
 	@CrossOrigin(origins ="*")
-	@RequestMapping(value = "/new", method = RequestMethod.POST)
+	@RequestMapping(value = "/newTrans", method = RequestMethod.POST)
 	public Transactions createTransaction(@RequestBody Transactions trans) {
 		return transServices.createTransaction(trans);
 	}
@@ -36,7 +36,7 @@ public class TransactionsController {
 
 	// withdraw
 	@CrossOrigin(origins = "*")
-	@PatchMapping("deposit/{id}/{amount}")
+	@PatchMapping("withdraw/{id}/{amount}")
 	public Transactions widthDraw(@PathVariable(value = "id") Long Id, @PathVariable(value = "amount") Long amount) {
 		return transServices.widthDraw(Id, amount);
 	}
