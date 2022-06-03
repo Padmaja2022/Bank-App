@@ -23,6 +23,7 @@
 
 p {
     margin: 0px;
+    font: black;
 }
 
 .description {
@@ -48,12 +49,14 @@ p {
 }
 
 .day {
-    font-size: 16px;
+    font-size: 13px;
     color: grey;
 }
 
-h2 {
+.text {
     font-size: 18px;
+    color: black;
+    font-family: 'Roboto' sans-serif;
 }
 
 .deposit {
@@ -65,39 +68,29 @@ h2 {
 }
 
 table {
-    border: 1px solid black
-  ;
     border-radius: 5px;
     padding: 15px;
     margin-bottom: 20px;
+    border: 1px rgb(215, 215, 215) solid;
+    margin: auto;
 }
 
 .flexer {
     display: flex;
     width: 600px;
-}
-
-.more {
-    margin-left: 400px;
-    margin-bottom: 20px;
-    padding: 20px 5px 0px 0px;
-    font-size: 12px;
-}
-
-.more:hover {
-    color: grey;
-    cursor: pointer;
-}
-
-.arrow {
-    padding-top: 22px;
-    padding-left: 1px;
-    width: 10px;
-    height: 10px;
+    margin: auto;
 }
 
 .container {
-    margin: 50px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
     height: 100vh;
-    width: 100vh;
+}
+
+.content {
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+    
 }
