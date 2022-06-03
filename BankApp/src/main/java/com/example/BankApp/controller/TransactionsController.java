@@ -27,19 +27,35 @@ public class TransactionsController {
 	public Transactions createTransaction(@RequestBody Transactions trans) {
 		return transServices.createTransaction(trans);
 	}
-
+//deposit
 	@CrossOrigin(origins = "*")
 	@PatchMapping("deposit/{id}/{amount}")
-	public Transactions deposit(@PathVariable(value = "id") Long id, @PathVariable(value = "amount") Long amount) {
-		return transServices.deposit(id, amount);
+	public Transactions deposit(@PathVariable(value = "id") Long Id, @PathVariable(value = "amount") Long amount) {
+		return transServices.deposit(Id, amount);
 	}
 
 	// withdraw
 	@CrossOrigin(origins = "*")
 	@PatchMapping("deposit/{id}/{amount}")
-	public Transactions withdraw(@PathVariable(value = "id") Long id, @PathVariable(value = "amount") Long amount) {
-		return transServices.deposit(id, amount);
+	public Transactions widthDraw(@PathVariable(value = "id") Long Id, @PathVariable(value = "amount") Long amount) {
+		return transServices.widthDraw(Id, amount);
 	}
 	
-
+@CrossOrigin(origins = "*")
+@RequestMapping(value = "delete/{id}", method = RequestMethod.DELETE)
+public void delete(@PathVariable(value = "id") Long Id) {
+	transServices.deleteTransaction(Id);
+	
+	System.out.println("The following transaction has been deleted " + Id);
+	
 }
+
+@CrossOrigin(origins = "*")
+@RequestMapping(value = "balance/{id}", method = RequestMethod.GET)
+public  double balance (@PathVariable(value = "id") Long Id) {
+	
+	return transServices.Balance(Id); 
+	
+}
+}
+
