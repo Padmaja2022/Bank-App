@@ -42,9 +42,9 @@ public class TransactionsService extends Transactions {
 			}
 			
 			//widthdraw
-			public Transactions widthDraw (Long Id, double ammount) {
+			public Transactions widthDraw (Long Id, double amount) {
 				Transactions trans = TransactionsRepo.findById(Id).get();
-				trans.setBalance(getBalance() - ammount);
+				trans.setBalance(getBalance() - amount);
 				return TransactionsRepo.save(trans); 				
 				
 			}
