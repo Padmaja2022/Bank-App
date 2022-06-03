@@ -1,15 +1,16 @@
 <div class="app">
-  <app-navbar></app-navbar>
-  <div class="grid">
-    <div>
-      <app-card></app-card>
-      <app-transactions></app-transactions>
-    </div>
-    <div class="vertical"></div>
-    <div>
-      <app-profile></app-profile>
-      <app-profile-data></app-profile-data>
-    </div>
+  <div class="navbar">
+    <a routerLink="landing-page">
+      <img src="assets/saturn (1).png" class="logo" />
+    </a>
+    <div class="whitespace"></div>
+    <a routerLink="dashboard">
+    <img src="assets/Orion_spacecraft.png" class="bill" />
+    </a>
+    <div class="whitespace"></div>
+    <a routerLink="transactions">
+    <img src="assets/bill.png" class="bill" />
+  </a>
   </div>
+  <router-outlet></router-outlet>
 </div>
-<router-outlet></router-outlet>

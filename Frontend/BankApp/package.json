@@ -18,7 +18,11 @@
     "@angular/platform-browser": "~13.3.0",
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
+    "@okta/okta-angular": "^5.2.0",
+    "@okta/okta-auth-js": "^6.6.1",
+    "@okta/okta-signin-widget": "^6.3.5",
     "rxjs": "~7.5.0",
+    "rxjs-compat": "^6.6.7",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

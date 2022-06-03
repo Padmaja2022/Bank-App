@@ -1,0 +1,158 @@
+.container {
+    display: flex;
+    padding: 5px 5px 5px 5px;
+  }
+  
+  .left {
+    width: 100%;
+    height: 100%;
+    margin-left: 70px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .right {
+    width: 100%;
+    height: 100%;
+    text-align: right;
+    padding-top: 10px;
+    margin-right: 50px;
+  }
+  
+  .main-content {
+    display: flex;
+  }
+  
+  .left-content {
+    width: 80%;
+    height: 100%;
+    margin-left: 90px;
+    padding: 60px 20px 20px 20px;
+  }
+  
+  .right-content {
+    width: 100%;
+    height: 100%;
+    margin-right: 90px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #krabs {
+    height: 475px;
+  }
+  
+  p, h1, h2, h5 {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+  }
+  
+  p {
+    color: #E8E8E8;
+    margin: 20px 60px 10px 0;
+  }
+  
+  h1 {
+    font-size: 50px;
+    margin: 0;
+  }
+  
+  h5 {
+    margin-top: 40px;
+    font-weight:lighter;
+    font-size: 16px;
+    margin-right: 100px;
+    padding-right: 50px;
+  }
+  
+  .background {
+    background: linear-gradient(180deg, #000000 77.94%, #3E5CC5 100%);
+    margin: 0;
+    height: 100vh;
+    margin-left:50px;
+  }
+  
+  .button1 {
+    background: none;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  
+  .button2 {
+    background: rgba(125, 146, 187, 0.48);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .button3 {
+    background: #97F675;
+    border: none;
+    color: #0A150F;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 20px 0 20px 0;
+  }
+  
+  .button3:hover {
+    box-shadow: 0px 5px 16px 1px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    opacity: 70%;
+  }
+  
+  .small {
+    margin-top: 40px;
+    color: #E8E8E8;
+    font-size: 14px;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .works {
+    color: #97F675;
+    padding: 0 10px 0 10px;
+  }
+  
+  .underline {
+    background: #97F675;
+    height: 3px;
+    width: 220px;
+  }
+  
+  .space {
+    height: 40px;
+    margin-right: 15px;
+  }
+  
+  .footer {
+    overflow: hidden;
+    margin: 0 0 20px 40px;
+    width: 100%;
+  }
+  
+  .names {
+    margin-top: 40px;
+    color: #B8BFFF;
+    font-size: 12px;
+    font-weight: lighter;
+  }
+  
+  .logo {
+    font-size: 30px;
+  }

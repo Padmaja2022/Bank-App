@@ -2,42 +2,48 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { CardComponent } from './components/card/card.component';
 import { TransactionsComponent } from './components/transactions/transactions.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ProfileDataComponent } from './components/profile-data/profile-data.component';
 import { SignupUpPageComponent } from './components/signup-up-page/signup-up-page.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
-import { HomeComponent } from './components/home/home.component';
 import {Routes, RouterModule} from '@angular/router';
+import { LandingPageComponent } from './components/landingpage/landingpage.component';
+import { MainService } from './services/main.service';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { TransactionsListComponent } from './components/transactions-list/transactions-list.component';
 
+const routes: Routes = [
+  { path: '', component: DashboardComponent },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'landing-page', component: LandingPageComponent },
+  { path: 'transactions', component: TransactionsListComponent },
+  { path: '**', redirectTo: '/', pathMatch: 'full' },
+  {path:"", redirectTo:"login", pathMatch:"full" },
+  { path:"login", component: LoginPageComponent },
+  { path:"signUp", component: SignupUpPageComponent },
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     CardComponent,
     TransactionsComponent,
     ProfileComponent,
     ProfileDataComponent,
     SignupUpPageComponent,
     LoginPageComponent,
-    HomeComponent
+    LandingPageComponent,
+    DashboardComponent,
+    TransactionsListComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule
+    RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [MainService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-const routes: Routes = [
-  {path:"", redirectTo:"login", pathMatch:"full"},
-  {path:"login", component:LoginPageComponent},
-  {path:"signUp", component:SignupUpPageComponent},
-  {path:"home", component:HomeComponent},
-];
 

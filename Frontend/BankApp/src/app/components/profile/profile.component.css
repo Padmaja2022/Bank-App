@@ -11,9 +11,8 @@ h2 {
 }
 
 .profile {
-    width: 475px;
+    width: auto;
     text-align: center;
-    margin: auto;
 }
 
 .name {
@@ -34,11 +33,20 @@ h2 {
 
 .setting {
     margin-top: 30px;
-    padding-left: 300px;
     height: 20px;
+    float: right
 }
 
 .setting:hover {
     opacity: 70%;
     cursor: pointer;
+}
+
+.left {
+    width: 100%;
+}
+
+.right {
+    width: 100%;
+    margin-right: 20px;
 }

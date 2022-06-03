@@ -1,11 +1,7 @@
 .middle {
     margin: 30px;
-    margin-left: 50px;
-  }
-  
-  .heading {
-    display: flex;
-    align-items: center;
+    margin-left: 120px;
+    background-color: white;
   }
   
   h1:hover {
@@ -19,8 +15,9 @@
   
   .month {
     font-weight: 600;
-    padding-left: 200px;
+    margin-left: 200px;
     font-size: 14px;
+    border: none;
   }
   
   .month:hover {
