@@ -27,7 +27,7 @@ public class AccountController {
 
 // creating new account
 	@CrossOrigin(origins = "*")
-	@RequestMapping(value = "/new", method = RequestMethod.POST)
+	@RequestMapping(value = "/newAcc", method = RequestMethod.POST)
 	public Accounts createAccount(@RequestBody Accounts acc) {
 		return accServices.createAccount(acc);
 	}
