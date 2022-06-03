@@ -7,7 +7,7 @@ import com.example.BankApp.model.Accounts;
 import com.example.BankApp.repository.AccountRepository;
 
 @Service
-public class AccountService extends Accounts {
+public class AccountService {
 
 @Autowired
 AccountRepository AccountRepo;
