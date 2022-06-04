@@ -91,6 +91,7 @@ table {
     align-items: center;
     width: 100%;
     text-align: right;
+    margin-right: 10px;
 }
 
 .more:hover {
