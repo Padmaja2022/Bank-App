@@ -14,6 +14,7 @@ import { MainService } from './services/main.service';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { TransactionsListComponent } from './components/transactions-list/transactions-list.component';
 
+
 const routes: Routes = [
   { path: '', component: DashboardComponent },
   { path: 'dashboard', component: DashboardComponent },
@@ -41,8 +42,10 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes)
+  
   ],
   providers: [MainService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
