@@ -39,6 +39,10 @@ public class Transactions {
 	
 	@Column(name="date_of_trans")
 	private LocalDateTime dateOfTrans;
+	
+	@ManyToOne
+	@JoinColumn(name = "account_id")
+	Accounts account;
 
 	
 	
