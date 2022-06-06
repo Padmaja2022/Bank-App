@@ -28,7 +28,6 @@ import lombok.Setter;
 
 @Entity
 @Table(name="Account")
-@NoArgsConstructor
 @Data
 
 public class Accounts {
@@ -46,7 +45,7 @@ public class Accounts {
 	 * @param balance
 	 */
 	public Accounts(long id, String firstName, String lastName, String email, String phoneNumber, String ssn,
-			String accountNumber, double balance) {
+		double balance) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -94,7 +93,6 @@ public class Accounts {
 		int uniqueID = index;
 		int randomNumber = (int) (Math.random() * Math.pow(10, 3));
 		return lastTwoOfSSN + uniqueID + randomNumber;
-
 	}
 	//one to many relationship, mappedBy - ownership of transactions
 	@OneToMany(cascade=CascadeType.ALL, mappedBy = "account")
