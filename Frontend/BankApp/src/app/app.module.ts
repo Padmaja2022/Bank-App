@@ -9,10 +9,12 @@ import { ProfileDataComponent } from './components/profile-data/profile-data.com
 import { SignupUpPageComponent } from './components/signup-up-page/signup-up-page.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import {Routes, RouterModule} from '@angular/router';
-import { LandingPageComponent } from './components/landingpage/landingpage.component';
+import { LandingPageComponent } from './components/landing-page/landingpage.component';
 import { MainService } from './services/main.service';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { TransactionsListComponent } from './components/transactions-list/transactions-list.component';
+import { SettingsModalComponent } from './components/settings-modal/settings-modal.component';
+import { GearComponent } from './components/gear/gear.component';
 
 
 const routes: Routes = [
@@ -37,7 +39,9 @@ const routes: Routes = [
     LoginPageComponent,
     LandingPageComponent,
     DashboardComponent,
-    TransactionsListComponent
+    TransactionsListComponent,
+    SettingsModalComponent,
+    GearComponent
   ],
   imports: [
     BrowserModule,

@@ -12,4 +12,10 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  visible:boolean = false;
+
+  show () {
+    this.visible = this.visible?false:true;
+  }
+
 }

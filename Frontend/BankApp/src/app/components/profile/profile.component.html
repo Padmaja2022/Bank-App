@@ -3,7 +3,7 @@
     <h2>My Profile</h2>
   </div>
   <div class="right">
-    <img src="assets/setting.png" class="setting">
+    <img src="assets/setting.png" class="setting" (click)="show()">
   </div>
   </div>
   <div class="profile">
@@ -11,4 +11,5 @@
     <h3 class="name">John Smith</h3>
     <p class="email">jsmith@gmail.com</p>
   </div>
+  <app-settings-modal *ngIf="visible"></app-settings-modal>
   
