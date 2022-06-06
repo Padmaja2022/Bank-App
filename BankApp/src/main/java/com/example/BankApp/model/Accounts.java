@@ -30,8 +30,7 @@ import lombok.Setter;
 @Table(name="Account")
 @NoArgsConstructor
 @Data
-@Getter 
-@Setter
+
 public class Accounts {
 
 	 
@@ -97,9 +96,8 @@ public class Accounts {
 		return lastTwoOfSSN + uniqueID + randomNumber;
 
 	}
-	//one to many foreign key constraint
-	@OneToMany(cascade=CascadeType.ALL)
-	@JoinColumn(name="trsid",referencedColumnName="accid")
+	//one to many relationship, mappedBy - ownership of transactions
+	@OneToMany(cascade=CascadeType.ALL, mappedBy = "account")
 	List<Transactions>transactions=new ArrayList<>();
 
 }
