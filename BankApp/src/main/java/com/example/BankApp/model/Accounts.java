@@ -30,8 +30,7 @@ import lombok.Setter;
 @Table(name="Account")
 @NoArgsConstructor
 @Data
-@Getter 
-@Setter
+
 public class Accounts {
 
 	 
