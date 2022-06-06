@@ -6,13 +6,12 @@ import { CardComponent } from './components/card/card.component';
 import { TransactionsComponent } from './components/transactions/transactions.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ProfileDataComponent } from './components/profile-data/profile-data.component';
-import { SignupUpPageComponent } from './components/signup-up-page/signup-up-page.component';
-import { LoginPageComponent } from './components/login-page/login-page.component';
 import {Routes, RouterModule} from '@angular/router';
 import { LandingPageComponent } from './components/landingpage/landingpage.component';
 import { MainService } from './services/main.service';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { TransactionsListComponent } from './components/transactions-list/transactions-list.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
@@ -22,8 +21,7 @@ const routes: Routes = [
   { path: 'transactions', component: TransactionsListComponent },
   { path: '**', redirectTo: '/', pathMatch: 'full' },
   {path:"", redirectTo:"login", pathMatch:"full" },
-  { path:"login", component: LoginPageComponent },
-  { path:"signUp", component: SignupUpPageComponent },
+  { path:"login", component: LoginComponent },
 ];
 
 @NgModule({
@@ -33,16 +31,15 @@ const routes: Routes = [
     TransactionsComponent,
     ProfileComponent,
     ProfileDataComponent,
-    SignupUpPageComponent,
-    LoginPageComponent,
+    LoginComponent,
     LandingPageComponent,
     DashboardComponent,
-    TransactionsListComponent
+    TransactionsListComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
-  
+    RouterModule.forRoot(routes),
   ],
   providers: [MainService],
 
