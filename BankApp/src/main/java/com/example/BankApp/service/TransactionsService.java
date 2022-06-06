@@ -49,6 +49,12 @@ public class TransactionsService extends Transactions {
 				
 			}
 			
-			//
+			public Transactions getTransactions (Long account_id) {
+				
+				Transactions trans = TransactionsRepo.findById(account_id).get();
+
+				
+				return trans; 
+			}
 			
 }

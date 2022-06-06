@@ -74,6 +74,11 @@ public class AccountController {
 		return accServices.updatePhone(id, phone);
 	}
 
+	@CrossOrigin(origins = "*")
+	@RequestMapping(value = "/get/account{id}", method = RequestMethod.GET) 
+	public Accounts getAccount(@PathVariable(value = "id") Long id) {
+			return accServices.getAccount(id);
+}
 	/*
 	// deposit
 	@CrossOrigin(origins = "*")
