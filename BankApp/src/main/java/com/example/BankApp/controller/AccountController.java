@@ -15,7 +15,7 @@ import com.example.BankApp.model.Accounts;
 import com.example.BankApp.service.AccountService;
 
 @RestController
-@RequestMapping("/account")
+@RequestMapping("/accounts")
 public class AccountController {
 
 
@@ -75,7 +75,7 @@ public class AccountController {
 	}
 
 	@CrossOrigin(origins = "*")
-	@RequestMapping(value = "/get/account{id}", method = RequestMethod.GET) 
+	@RequestMapping(value = "/gt/account/{id}", method = RequestMethod.GET) 
 	public Accounts getAccount(@PathVariable(value = "id") Long id) {
 			return accServices.getAccount(id);
 }

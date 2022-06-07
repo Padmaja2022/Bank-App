@@ -9,6 +9,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -43,7 +44,11 @@ public class Accounts {
 	 * @param ssn
 	 * @param accountNumber
 	 * @param balance
+	 * 
+	 *
 	 */
+	public Accounts() {}
+	
 	public Accounts(long id, String firstName, String lastName, String email, String phoneNumber, String ssn,
 		double balance) {
 		this.id = id;
@@ -95,7 +100,7 @@ public class Accounts {
 		return lastTwoOfSSN + uniqueID + randomNumber;
 	}
 	//one to many relationship, mappedBy - ownership of transactions
-	@OneToMany(cascade=CascadeType.ALL, mappedBy = "account")
-	List<Transactions>transactions=new ArrayList<>();
-
+	@OneToMany(cascade=CascadeType.ALL)
+	@JoinColumn(name = "account")
+	List<Transactions>transaction;
 }

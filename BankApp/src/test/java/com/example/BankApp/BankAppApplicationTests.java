@@ -1,12 +1,19 @@
 package com.example.BankApp;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.example.BankApp.repository.AccountRepository;
+import com.example.BankApp.repository.TransactionsRepository;
 import com.example.BankApp.service.AccountService;
 import com.example.BankApp.service.TransactionsService;
+
 @SpringBootTest
 class BankAppApplicationTests {
+@Autowired
+	private AccountRepository aaa;
+	private TransactionsRepository bbb; 
 
 	@Test
 	void contextLoads() {

@@ -40,10 +40,11 @@ public class Transactions {
 	@Column(name="date_of_trans")
 	private LocalDateTime dateOfTrans;
 	
-	@ManyToOne
-	@JoinColumn(name = "account_id")
+/*	@ManyToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name = "account")
 	Accounts account;
-
+*/ @Column(name="account")
+	private Long account; 
 	
 	
 }
