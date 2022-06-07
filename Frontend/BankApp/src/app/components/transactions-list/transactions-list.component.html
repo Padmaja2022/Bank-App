@@ -13,11 +13,32 @@
         <button (click)="doSearch(myInput.value)" class="submit">Search</button>
       </div>
     </div>
-    <table>
+    <table class="table table-striped">
       <tr>
         <th class="date">Date</th>
         <th class="name">Name</th>
         <th class="amount">Amount</th>
+      </tr>
+      <tr *ngFor="let transaction of transactions">
+        <td>
+          <div>
+            <p class="day">{{transaction.date }}</p>
+          </div>
+        </td>
+        <td>
+          <div class="product">
+            <img src="assets/hdr.png" class="image" />
+            <div class="description">
+              <p class="productName">{{transaction.name}}</p>
+              <div class="meta">
+                <p>{{transaction.category}}</p>
+              </div>
+            </div>
+          </div>
+        </td>
+        <td>
+          <p class="price">{{ transaction.amount | currency: 'USD' }}</p>
+        </td>
       </tr>
       <tr>
         <td>
@@ -155,7 +176,7 @@
         <td>
           <div>
             <p class="day">Yesterday</p>
-            <p class="time">4:47 PM</p>
+            <p class="time">2:47 PM</p>
           </div>
         </td>
         <td>

@@ -13,7 +13,6 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { TransactionsListComponent } from './components/transactions-list/transactions-list.component';
 import { LoginComponent } from './login/login.component';
 import { SettingsModalComponent } from './components/settings-modal/settings-modal.component';
-import { GearComponent } from './components/gear/gear.component';
 
 
 const routes: Routes = [
@@ -39,7 +38,8 @@ const routes: Routes = [
     TransactionsListComponent,
     LoginComponent,
     SettingsModalComponent,
-    GearComponent
+    GearComponent,
+    SettingsModalComponent
   ],
   imports: [
     BrowserModule,

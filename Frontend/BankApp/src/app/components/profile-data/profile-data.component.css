@@ -2,6 +2,7 @@ h2 {
     margin: 15px;
     font-size: 14px;
     padding-top: 20px;
+    font-weight: 600;
 }
 
 .savings {
@@ -12,6 +13,7 @@ h2 {
     border-radius: 5px;
     height: 65px;
     padding-top: 5px;
+    margin-bottom: 20px;
 }
 
 .goal {
@@ -25,7 +27,7 @@ h2 {
     font-family: "Inter", sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 15px;
     padding: 0px 0 0 20px;
     margin-top: 5px;
 }
@@ -91,6 +93,7 @@ th {
 .upcoming {
     margin-top: 10px;
     font-size: 14px;
+    font-weight: 600;
 }
 
 .income {
@@ -120,4 +123,8 @@ th {
     width: 40px;
     border-radius: 5px;
     margin: 8px 10px 5px 10px;
+}
+
+hr {
+    margin: 5px 0;
 }
