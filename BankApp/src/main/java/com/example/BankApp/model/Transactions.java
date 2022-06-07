@@ -2,7 +2,8 @@ package com.example.BankApp.model;
 
 
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
+//import java.time.LocalDateTime;
 
 import javax.persistence.*;
 
@@ -15,13 +16,13 @@ import lombok.Setter;
 
 @Entity
 @Table(name="Transactions")
-@NoArgsConstructor
+//@NoArgsConstructor
 @AllArgsConstructor
 
 @Data
 @Getter 
 @Setter
-public class Transactions {
+public class Transactions  {
 
 	 
 	
@@ -38,8 +39,11 @@ public class Transactions {
 	private String type;
 	
 	@Column(name="date_of_trans")
-	private LocalDateTime dateOfTrans;
+	private LocalDate dateOfTrans;
 	
+	public Transactions () {
+		this.dateOfTrans=LocalDate.now();
+	}
 /*	@ManyToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name = "account")
 	Accounts account;

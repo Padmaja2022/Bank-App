@@ -47,7 +47,11 @@ public class Accounts {
 	 * 
 	 *
 	 */
-	public Accounts() {}
+public Accounts() {}
+ 
+public Accounts (long id) {
+	this.accountNumber = setAccountNumber();
+	}
 	
 	public Accounts(long id, String firstName, String lastName, String email, String phoneNumber, String ssn,
 		double balance) {
