@@ -2,12 +2,19 @@ h2 {
     margin-top: 30px;
     font-size: 18px;
     margin-left: 15px;
+    font-weight: 600;
+}
+
+#h2 {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
 }
 
 .picture {
     margin-top: 30px;
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
 }
 
 .profile {

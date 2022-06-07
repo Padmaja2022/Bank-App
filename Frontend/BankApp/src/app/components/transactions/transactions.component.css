@@ -53,8 +53,10 @@ p {
     color: grey;
 }
 
-h2 {
+#h2 {
     font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
 }
 
 .deposit {
@@ -65,17 +67,22 @@ h2 {
     color: rgb(38, 177, 38);
 }
 
-table {
+#table {
     border: 1px solid rgb(218, 218, 218);
+    border-collapse: separate !important;
     border-radius: 5px;
     padding: 15px;
     margin-bottom: 20px;
+    margin-top: 10px;
     background: white;
+    width: 100%;
 }
 
 .container {
     display: flex;
     width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .header {
@@ -91,7 +98,6 @@ table {
     align-items: center;
     width: 100%;
     text-align: right;
-    margin-right: 10px;
 }
 
 .more:hover {
@@ -103,4 +109,14 @@ table {
     width: 10px;
     height: 10px;
     margin-left: 5px;
+}
+
+a {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;   
+}
+
+a:hover {
+    opacity: 80%;
 }

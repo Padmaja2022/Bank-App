@@ -1,9 +1,9 @@
 <div class="flex">
   <div class="left">
-    <h2>My Profile</h2>
+    <h2 id="h2">My Profile</h2>
   </div>
   <div class="right">
-    <img src="assets/setting.png" class="setting" (click)="show()">
+    <img src="assets/setting.png" class="setting"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
   </div>
   </div>
   <div class="profile">
@@ -11,5 +11,20 @@
     <h3 class="name">John Smith</h3>
     <p class="email">jsmith@gmail.com</p>
   </div>
-  <app-settings-modal *ngIf="visible"></app-settings-modal>
+
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Settings</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <app-settings-modal></app-settings-modal>
+          </div>
+      </div>
+  </div>
+</div>
+
   

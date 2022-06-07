@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { map, Observable } from 'rxjs';
+import { Account } from '../common/account';
+import { Transaction } from '../common/transaction';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +10,5 @@ import { HttpClient } from '@angular/common/http';
 
 export class MainService {
 
-  private baseUrl = 'http://localhost:8080/api/';
 
-  constructor(private httpClient: HttpClient) { }
 }

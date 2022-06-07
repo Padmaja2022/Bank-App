@@ -26,8 +26,7 @@
   height: 40px;
   padding: 5px 15px;
     display: flex;
-  background: #f8f8f8;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
   border-radius: 5px 5px 0px 0px;
 }
 
@@ -40,17 +39,13 @@
   align-items: center;
 }
 
-.form {
-  padding: 20px;
-}
-
 .subheader {
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-size: 14px;
   line-height: 12px;
 
-  color: #828282;
+  color: #5f5f5f;
 }
 
 .background {
@@ -87,15 +82,11 @@ input {
 }
 
 button {
-  background: rgb(11, 92, 255);
-  border: none;
-  color: white;
   padding: 12px 20px;
   text-align: center;
-  text-decoration: none;
   display: inline-block;
-  font-size: 13px;
-  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 15px;
 }
 
 .center {
