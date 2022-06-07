@@ -14,7 +14,6 @@ import { MainService } from './services/main.service';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { TransactionsListComponent } from './components/transactions-list/transactions-list.component';
 import { SettingsModalComponent } from './components/settings-modal/settings-modal.component';
-import { GearComponent } from './components/gear/gear.component';
 
 
 const routes: Routes = [
@@ -40,8 +39,7 @@ const routes: Routes = [
     LandingPageComponent,
     DashboardComponent,
     TransactionsListComponent,
-    SettingsModalComponent,
-    GearComponent
+    SettingsModalComponent
   ],
   imports: [
     BrowserModule,

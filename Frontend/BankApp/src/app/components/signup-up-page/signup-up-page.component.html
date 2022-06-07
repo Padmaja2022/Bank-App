@@ -1,17 +1,38 @@
-<div>
-    <h1>Hello Welcome </h1>
-      <h3>Create An Account</h3>
-       <form>
-         <div>
-           <label for="email">Email</label>
-           <input  required  type="text">
-           <label for="password">Password</label>
-           <input  type="password">
-           <label for="number">Number</label>
-           <input type="number">
-         </div>
-         <button>Submit</button>
-         <span>Already have an account? 
-         <a routerLink="/login">signUp</a></span>
-       </form>
-   </div>
+<form>
+  <div>
+    <label for="firstName" class="form-label">First name</label>
+      <input
+        type="text"
+        autocomplete="off"
+        class="form-control"
+      />
+      <label for="lastName" class="form-label">Last name</label>
+      <input
+        type="text"
+        autocomplete="off"
+        class="form-control"
+      />
+      <label for="email" class="form-label">Email</label>
+      <input
+        type="text"
+        autocomplete="off"
+        class="form-control"
+      />
+      <label for="password" class="form-label">Password</label>
+      <input
+        type="text"
+        autocomplete="off"
+        class="form-control"
+      />
+      <label for="number" class="form-label">Phone Number</label>
+      <input
+        type="text"
+        autocomplete="off"
+        class="form-control"
+      />
+  </div>
+ 
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary">Submit</button>
+  </div>
+</form>
