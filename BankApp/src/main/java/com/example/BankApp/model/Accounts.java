@@ -3,12 +3,17 @@ package com.example.BankApp.model;
 
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.AccessLevel;
@@ -23,10 +28,8 @@ import lombok.Setter;
 
 @Entity
 @Table(name="Account")
-
 @Data
-@Getter 
-@Setter
+
 public class Accounts {
 
 	 
@@ -42,7 +45,7 @@ public class Accounts {
 	 * @param balance
 	 */
 	public Accounts(long id, String firstName, String lastName, String email, String phoneNumber, String ssn,
-			String accountNumber, double balance) {
+		double balance) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -90,7 +93,9 @@ public class Accounts {
 		int uniqueID = index;
 		int randomNumber = (int) (Math.random() * Math.pow(10, 3));
 		return lastTwoOfSSN + uniqueID + randomNumber;
-
 	}
+	//one to many relationship, mappedBy - ownership of transactions
+	@OneToMany(cascade=CascadeType.ALL, mappedBy = "account")
+	List<Transactions>transactions=new ArrayList<>();
 
 }

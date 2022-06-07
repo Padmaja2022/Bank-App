@@ -57,4 +57,13 @@ AccountRepository AccountRepo;
 		acc.setPhoneNumber(phone);
 		return AccountRepo.save(acc);
 	}
+	
+	public Accounts getAccount(Long Id) {
+		
+		Accounts acc = AccountRepo.findById(Id).get();
+
+		
+		return acc; 
+	}
+	
 }

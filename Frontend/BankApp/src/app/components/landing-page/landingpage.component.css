@@ -41,15 +41,6 @@
   #krabs {
     height: 475px;
     position: relative;
-    animation-name: animate;
-    animation-duration: 8s;
-    animation-iteration-count: infinite;
-  }
-
-  @keyframes animate {
-    0%   {top: 0px}
-    50%   {top: 10px}
-    100% {top: 0px}
   }
   
   p, h1, h2, h5 {

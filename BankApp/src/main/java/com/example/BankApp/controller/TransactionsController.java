@@ -57,5 +57,12 @@ public  double balance (@PathVariable(value = "id") Long Id) {
 	return transServices.Balance(Id); 
 	
 }
+
+@CrossOrigin(origins = "*")
+@RequestMapping(value = "/get/transactions{account_id}", method = RequestMethod.GET) 
+public Transactions getTransactions(@PathVariable(value = "id") Long account_id) {
+		return transServices.getTransactions(account_id);
+}
+
 }
 

@@ -44,7 +44,7 @@ public class AccountController {
 
 	// update first name
 	@CrossOrigin(origins = "*")
-	@PatchMapping("/{id}/{firstNewName}")
+	@PatchMapping("/firstname/{id}/{firstNewName}")
 	public Accounts updateFname(@PathVariable(value = "id") Long id,
 			@PathVariable(value = "firstNewName") String newName) {
 		return accServices.updateFirstName(id, newName);
@@ -54,7 +54,7 @@ public class AccountController {
 
 	// update lastname
 	@CrossOrigin(origins = "*")
-	@PatchMapping("/{id}/{lastNewName}")
+	@PatchMapping("/lastname/{id}/{lastNewName}")
 	public Accounts updateLName(@PathVariable(value = "id") Long id,
 			@PathVariable(value = "lastNewName") String newName) {
 		return accServices.updateLastName(id, newName);
@@ -62,18 +62,23 @@ public class AccountController {
 
 	// update email
 	@CrossOrigin(origins = "*")
-	@PatchMapping("/{id}/{email}")
+	@PatchMapping("/email/{id}/{email}")
 	public Accounts updateEmail(@PathVariable(value = "id") Long id, @PathVariable(value = "email") String email) {
 		return accServices.updateEmail(id, email);
 	}
 
 	// update phone
 	@CrossOrigin(origins = "*")
-	@PatchMapping("/{id}/{phone}")
+	@PatchMapping("/phone/{id}/{phone}")
 	public Accounts updatePhone(@PathVariable(value = "id") Long id, @PathVariable(value = "phone") String phone) {
 		return accServices.updatePhone(id, phone);
 	}
 
+	@CrossOrigin(origins = "*")
+	@RequestMapping(value = "/get/account{id}", method = RequestMethod.GET) 
+	public Accounts getAccount(@PathVariable(value = "id") Long id) {
+			return accServices.getAccount(id);
+}
 	/*
 	// deposit
 	@CrossOrigin(origins = "*")
