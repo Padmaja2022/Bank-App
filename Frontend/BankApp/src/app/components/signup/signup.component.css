@@ -4,3 +4,49 @@ input {
 form {
     margin: 10px;
 } 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: Quicksand sans-serif;
+    }
+    
+    html{
+        font-size: 62.5%;
+    }
+    .container{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .form-wrapper{
+        width: 100rem;
+        height: 70rem;
+        background-color: lightgreen;
+        border-radius: 3rem;
+        box-shadow: 0 2rem 6rem rgba(0,0,0,0.3);
+        position: relative;
+    }
+    
+    .green-bg{
+      width: 40%;
+      height: 100%;
+      background-color: linear-gradient(to right,#3ab19b, #4cbf91);
+    position: absolute;
+    top: 0;
+    left: 0;
+    }
+    
+    .green-bg button{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 16rem;
+        height: 14rem;
+    }
+    
+     
