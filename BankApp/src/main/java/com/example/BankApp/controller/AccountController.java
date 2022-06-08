@@ -1,7 +1,5 @@
 package com.example.BankApp.controller;
 
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -18,12 +16,8 @@ import com.example.BankApp.service.AccountService;
 @RequestMapping("/accounts")
 public class AccountController {
 
-
-
 	@Autowired
 	AccountService accServices;
-
-
 
 // creating new account
 	@CrossOrigin(origins = "*")
@@ -32,15 +26,11 @@ public class AccountController {
 		return accServices.createAccount(acc);
 	}
 
-
-
 	@CrossOrigin(origins = "*")
 	@RequestMapping(value = "/delete/{Id}", method = RequestMethod.DELETE)
 	public void deleteAccount(@PathVariable(value = "Id") Long id) {
 		accServices.deleteAccount(id);
 	}
-
-
 
 	// update first name
 	@CrossOrigin(origins = "*")
@@ -49,8 +39,6 @@ public class AccountController {
 			@PathVariable(value = "firstNewName") String newName) {
 		return accServices.updateFirstName(id, newName);
 	}
-
-
 
 	// update lastname
 	@CrossOrigin(origins = "*")
@@ -75,23 +63,17 @@ public class AccountController {
 	}
 
 	@CrossOrigin(origins = "*")
-	@RequestMapping(value = "/gt/account/{id}", method = RequestMethod.GET) 
+	@RequestMapping(value = "/gt/account/{id}", method = RequestMethod.GET)
 	public Accounts getAccount(@PathVariable(value = "id") Long id) {
-			return accServices.getAccount(id);
-}
-	/*
-	// deposit
-	@CrossOrigin(origins = "*")
-	@PatchMapping("deposit/{id}/{amount}")
-	public Accounts deposit(@PathVariable(value = "id") Long id, @PathVariable(value = "amount") Long amount) {
-		return accServices.deposit(id, amount);
+		return accServices.getAccount(id);
 	}
 
-	// withdraw
+	// initDeposit
 	@CrossOrigin(origins = "*")
-	@PatchMapping("deposit/{id}/{amount}")
-	public Accounts withdraw(@PathVariable(value = "id") Long id, @PathVariable(value = "amount") Long amount) {
-		return accServices.deposit(id, amount);
+	@PatchMapping("initdeposit/{id}/{amount}")
+	public Accounts deposit(@PathVariable(value = "id") Long id, @PathVariable(value = "amount") Long amount) {
+		return accServices.initDeposit(id, amount);
 	}
-	*/
+
+	
 }
