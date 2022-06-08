@@ -8,7 +8,7 @@ import com.example.BankApp.model.Transactions;
 import com.example.BankApp.repository.TransactionsRepository;
 
 @Service
-public class TransactionsService extends Transactions {
+public class TransactionsService extends Transactions{
 	
 	
 	@Autowired
