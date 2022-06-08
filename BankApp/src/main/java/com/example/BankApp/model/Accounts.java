@@ -47,12 +47,15 @@ public class Accounts {
 	 * 
 	 *
 	 */
-public Accounts() {}
- 
-public Accounts (long id) {
-	this.accountNumber = setAccountNumber();
-	}
 	
+	private static int index = 10000;
+	
+	public Accounts() {
+		this.accountNumber = index + (long)(Math.random() * Math.pow(10, 3));
+		index++;
+	}
+ 
+
 	public Accounts(long id, String firstName, String lastName, String email, String phoneNumber, String ssn,
 		double balance) {
 		this.id = id;
@@ -61,8 +64,9 @@ public Accounts (long id) {
 		this.email = email;
 		this.phoneNumber = phoneNumber;
 		this.ssn = ssn;
-		this.accountNumber = setAccountNumber();
 		this.balance = balance;
+		this.accountNumber = index + (long)(Math.random() * Math.pow(10, 3));
+		index++;
 	}
 
 	@Id
@@ -89,20 +93,14 @@ public Accounts (long id) {
 	private String ssn;
 	
 	@Column(name="account_Number")
-	private String accountNumber;
+	private Long accountNumber;
 	
 	@Column(name="balance")
 	private double balance;
 		
-	private static int index = 10000;
 
-	private String setAccountNumber() {
 
-		String lastTwoOfSSN = ssn.substring(ssn.length() - 2, ssn.length());
-		int uniqueID = index;
-		int randomNumber = (int) (Math.random() * Math.pow(10, 3));
-		return lastTwoOfSSN + uniqueID + randomNumber;
-	}
+	
 	//one to many relationship, mappedBy - ownership of transactions
 	@OneToMany(cascade=CascadeType.ALL)
 	@JoinColumn(name = "account")
