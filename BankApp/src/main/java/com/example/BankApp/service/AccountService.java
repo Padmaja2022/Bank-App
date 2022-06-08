@@ -66,4 +66,12 @@ AccountRepository AccountRepo;
 		return acc; 
 	}
 	
+	public  Accounts initDeposit(Long Id, double ammount) {
+	 Accounts acc = AccountRepo.findById(Id).get();
+	 acc.setBalance(ammount);
+	 return acc; 
+	 
+	 
+	}
+	
 }
