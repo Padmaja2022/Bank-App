@@ -30,62 +30,62 @@ class BankAppApplicationTests {
 	@Test 
 void makeDeposit() {
 		
-		//var makeDeposit = new TransactionsService();
-	abc.deposit(15L, 123.0);
+		
+	abc.deposit(1L, 50.0);
 		
 	}
-	//@Test 
-	//void getBalance() {
-	//	var getBalance = new TransactionsService();
-	//	abc.Balance(1L);
+	@Test 
+	void getBalance() {
+	
+		abc.Balance(2L);
 		
-	//}
+	}
 	
 	
 	
 	@Test 
 	void makeWidthDraw() {
-	//	var makeWidthDraw = new TransactionsService();
-		abc.widthDraw(15L, 100); 
+	
+		abc.widthDraw(3L, 30.0); 
 	} 
 	
 	@Test 
 	void initDeposit() {
-		bcd.initDeposit(1L, 1000);
+		bcd.initDeposit(4L, 1000);
 		
 	}
 	
-	@Test
+	@Test	
 	void getAccount() {
-//		var getAccount = new AccountService(); 
-		bcd.getAccount(1L);
-		
+	
+		bcd.getAccount(5L);
+	
 	}
 	@Test
 	void updatePhoneNumber() {
 		
-	//	var updatePhoneNumber = new AccountService();
-		bcd.updatePhone(1L, "5555555555");
+	
+	bcd.updatePhone(1L, "1234567654");
 		
 		
 	}
 	
 	@Test
 	void updateEmail() { 
-	//	var updateEmail = new AccountService();
-		bcd.updateEmail(1L, "yes@gmail.com");
+
+		bcd.updateEmail(2L, "no@gmail.com");
 	}
 	
 	@Test
 	void updateFirstName() {
-	//	var updateFirstName = new AccountService() ;
-		bcd.updateFirstName(1L, "Dylan");
+	
+		bcd.updateFirstName(3L, "Ashanti");
 	}
 	
 	@Test
 	void updateLastName() {
-		//var updateLastName = new AccountService();
-		bcd.updateLastName(1L, "Henry");
+		
+		bcd.updateLastName(3L, "Blount");
 	}
 		
 }

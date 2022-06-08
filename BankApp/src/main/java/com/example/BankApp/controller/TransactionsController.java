@@ -61,10 +61,10 @@ public class TransactionsController {
 	}
 /*
 	@CrossOrigin(origins = "*")
-	@RequestMapping(value = "/get/transactions{account_id}", method = RequestMethod.GET) 
+	@RequestMapping(value = "/gt/transactions{account_id}", method = RequestMethod.GET) 
 	public Transactions getTransactions(@PathVariable(value = "id") Long account_id) {
 		return transServices.getTransactions(account_id);
-	}*/
+	} */ 
 
 }
 
