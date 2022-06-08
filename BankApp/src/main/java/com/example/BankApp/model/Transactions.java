@@ -17,7 +17,7 @@ import lombok.Setter;
 @Entity
 @Table(name="Transactions")
 //@NoArgsConstructor
-@AllArgsConstructor
+//@AllArgsConstructor
 
 @Data
 @Getter 
@@ -32,8 +32,8 @@ public class Transactions  {
 	
 	private long id;
 	
-	@Column(name="balance")
-	private double balance;
+	@Column(name="amount")
+	private double amount;
 	
 	@Column(name="type_of_trans")
 	private String type;
@@ -41,16 +41,22 @@ public class Transactions  {
 	@Column(name="date_of_trans")
 	private LocalDate dateOfTrans;
 	
-	public Transactions () {
-		this.dateOfTrans=LocalDate.now();
-	}
 /*	@ManyToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name = "account")
 	Accounts account;
 */ @Column(name="account")
 	private Long account; 
 	
-	
+	public Transactions () {
+		this.dateOfTrans=LocalDate.now();
+	}
+
+	public Transactions(double amount, String type, long account) {
+		this.amount = amount;
+		this.type = type;
+		this.account = account;
+		this.dateOfTrans=LocalDate.now();
+	}
 }
 	
 	

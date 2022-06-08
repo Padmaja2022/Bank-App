@@ -5,14 +5,20 @@ import org.springframework.stereotype.Service;
 
 import com.example.BankApp.model.Accounts;
 import com.example.BankApp.model.Transactions;
+import com.example.BankApp.repository.AccountRepository;
 import com.example.BankApp.repository.TransactionsRepository;
 
 @Service
-public class TransactionsService extends Transactions{
+public class TransactionsService {
+
 	
 	
 	@Autowired
-	TransactionsRepository TransactionsRepo;  
+	AccountRepository AccountRepo;
+	@Autowired
+	TransactionsRepository TransactionsRepo; 
+	
+
 	
 	// create a new Transaction
 		public Transactions createTransaction(Transactions trans) {
@@ -25,36 +31,40 @@ public class TransactionsService extends Transactions{
 				
 			}
 			// deposit
-			public Transactions deposit (Long Id, double ammount) {
-				Transactions trans = TransactionsRepo.findById(Id).get();
-				trans.setBalance(getBalance() + ammount);
-				return TransactionsRepo.save(trans); 				
+			public Transactions deposit (Long Id, double amount) {
+				Transactions trans = new Transactions(amount, "deposit", Id);
+				createTransaction(trans);
+				Accounts acc = AccountRepo.findById(Id).get();
+				acc.setBalance(acc.getBalance() + amount);
+				AccountRepo.save(acc);
+				return TransactionsRepo.save(trans);		
 				
 			}
 			
 			//get balance
 			
 			public double Balance (Long Id) {
-				Transactions trans = TransactionsRepo.findById(Id).get();
-				
-				return  trans.getBalance(); 
-			
+				Accounts acc = AccountRepo.findById(Id).get();
+				return acc.getBalance();
 			}
-			
+		
 			//widthdraw
 			public Transactions widthDraw (Long Id, double amount) {
-				Transactions trans = TransactionsRepo.findById(Id).get();
-				trans.setBalance(getBalance() - amount);
+				Transactions trans = new Transactions(amount, "withdraw", Id);
+				createTransaction(trans);
+				Accounts acc = AccountRepo.findById(Id).get();
+				acc.setBalance(acc.getBalance() - amount);
+				AccountRepo.save(acc);
 				return TransactionsRepo.save(trans); 				
 				
 			}
 			
-			public Transactions getTransactions (Long account_id) {
+			/*public Transactions getTransactions (Long account_id) {
 				
-				Transactions trans = TransactionsRepo.findById(account_id).get();
+				Accounts acc = TransactionsRepo.findById(account_id).get();
 
 				
 				return trans; 
-			}
+			} */
 			
 }
