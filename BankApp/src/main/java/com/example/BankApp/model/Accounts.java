@@ -14,15 +14,13 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
 import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
+
 
 //import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 
 import lombok.Data;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
@@ -42,13 +40,12 @@ public class Accounts {
 	 * @param balance
 	 */
 	
-	public Accounts() {
-	}
 
-	public Accounts(long id) {
-		
-		this.accountNumber = setAccountNumber();
-		
+	private static int index = 10000;
+	
+	public Accounts() {
+		this.accountNumber = index + (long)(Math.random() * Math.pow(10, 3));
+		index++;
 	}
 
 	public Accounts(long id, String firstName, String lastName, String email, String phoneNumber, String ssn,
@@ -60,9 +57,9 @@ public class Accounts {
 		this.email = email;
 		this.phoneNumber = phoneNumber;
 		this.ssn = ssn;
-		this.accountNumber = setAccountNumber();
 		this.balance = balance;
-		
+		this.accountNumber = index + (long)(Math.random() * Math.pow(10, 3));
+		index++;
 	}
 
 	@Id
@@ -85,23 +82,12 @@ public class Accounts {
 
 	@Column(name = "ssn")
 	private String ssn;
-
-	@Column(name = "account_Number")
-	private String accountNumber;
-
-	@Column(name = "balance")
+	
+	@Column(name="account_Number")
+	private Long accountNumber;
+	
+	@Column(name="balance")
 	private double balance;
-
-	private static int index = 10000;
-
-	private String setAccountNumber() {
-
-		String lastTwoOfSSN = ssn.substring(ssn.length() - 2, ssn.length());
-		int uniqueID = index;
-		int randomNumber = (int) (Math.random() * Math.pow(10, 3));
-		return lastTwoOfSSN + uniqueID + randomNumber;
-		
-	}
 
 	// one to many relationship, mappedBy - ownership of transactions
 	@OneToMany(cascade = CascadeType.ALL)
