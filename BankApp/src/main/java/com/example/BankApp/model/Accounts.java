@@ -1,7 +1,5 @@
 package com.example.BankApp.model;
 
-
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -28,14 +26,12 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name="Account")
+@Table(name = "Account")
 @Data
 
 public class Accounts {
 
-	 
-	
-	/**
+	/*
 	 * @param id
 	 * @param firstName
 	 * @param lastName
@@ -44,17 +40,20 @@ public class Accounts {
 	 * @param ssn
 	 * @param accountNumber
 	 * @param balance
-	 * 
-	 *
 	 */
-public Accounts() {}
- 
-public Accounts (long id) {
-	this.accountNumber = setAccountNumber();
-	}
 	
+	public Accounts() {
+	}
+
+	public Accounts(long id) {
+		
+		this.accountNumber = setAccountNumber();
+		
+	}
+
 	public Accounts(long id, String firstName, String lastName, String email, String phoneNumber, String ssn,
-		double balance) {
+			double balance) {
+		
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -63,37 +62,36 @@ public Accounts (long id) {
 		this.ssn = ssn;
 		this.accountNumber = setAccountNumber();
 		this.balance = balance;
+		
 	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name ="accid")
+	@Column(name = "accid")
 
 	private long id;
-	
-		
 
-	@Column(name="first_Name")
+	@Column(name = "first_Name")
 	private String firstName;
-	
-	@Column(name="last_Name")
+
+	@Column(name = "last_Name")
 	private String lastName;
 
-	@Column(name="email")
+	@Column(name = "email")
 	private String email;
 
-	@Column(name="phone_Number")
-	private String phoneNumber ;
-	
-	@Column(name="ssn")
+	@Column(name = "phone_Number")
+	private String phoneNumber;
+
+	@Column(name = "ssn")
 	private String ssn;
-	
-	@Column(name="account_Number")
+
+	@Column(name = "account_Number")
 	private String accountNumber;
-	
-	@Column(name="balance")
+
+	@Column(name = "balance")
 	private double balance;
-		
+
 	private static int index = 10000;
 
 	private String setAccountNumber() {
@@ -102,9 +100,11 @@ public Accounts (long id) {
 		int uniqueID = index;
 		int randomNumber = (int) (Math.random() * Math.pow(10, 3));
 		return lastTwoOfSSN + uniqueID + randomNumber;
+		
 	}
-	//one to many relationship, mappedBy - ownership of transactions
-	@OneToMany(cascade=CascadeType.ALL)
+
+	// one to many relationship, mappedBy - ownership of transactions
+	@OneToMany(cascade = CascadeType.ALL)
 	@JoinColumn(name = "account")
-	List<Transactions>transaction;
+	List<Transactions> transaction;
 }
