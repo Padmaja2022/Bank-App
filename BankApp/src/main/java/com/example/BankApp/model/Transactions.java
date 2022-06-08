@@ -35,16 +35,13 @@ public class Transactions  {
 	@Column(name="amount")
 	private double amount;
 	
-	@Column(name="type_of_trans")
+	@Column(name="category")
 	private String type;
 	
 	@Column(name="date_of_trans")
 	private LocalDate dateOfTrans;
 	
-/*	@ManyToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name = "account")
-	Accounts account;
-*/ @Column(name="account")
+	@Column(name="account")
 	private Long account; 
 	
 	public Transactions () {

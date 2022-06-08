@@ -1,5 +1,7 @@
 package com.example.BankApp.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -59,12 +61,14 @@ public class TransactionsController {
 		return transServices.Balance(Id); 
 	
 	}
-/*
+
 	@CrossOrigin(origins = "*")
+
 	@RequestMapping(value = "/gt/transactions{account_id}", method = RequestMethod.GET) 
 	public Transactions getTransactions(@PathVariable(value = "id") Long account_id) {
 		return transServices.getTransactions(account_id);
-	} */ 
+	} 
+
 
 }
 
