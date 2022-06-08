@@ -13,79 +13,77 @@ import com.example.BankApp.service.TransactionsService;
 
 @SpringBootTest
 class BankAppApplicationTests {
-/*	@Mock
-	AccountRepository aaa;
-	@Mock
-	TransactionsRepository bbb; 
-*/
+
 	@Autowired
-	TransactionsService abc = new TransactionsService(); 
-	@Autowired 
+	TransactionsService abc = new TransactionsService();
+	@Autowired
 	AccountService bcd = new AccountService();
-	
+
 	@Test
 	void contextLoads() {
 	}
-	
-	@Test 
-void makeDeposit() {
-		
-		
-	abc.deposit(1L, 50.0);
-		
+
+	@Test
+	void makeDeposit() {
+
+		abc.deposit(1L, 50.0);
+
 	}
-	@Test 
+
+	@Test
 	void getBalance() {
-	
+
 		abc.Balance(2L);
-		
+
 	}
-	
-	
-	
-	@Test 
+
+	@Test
 	void makeWidthDraw() {
-	
-		abc.widthDraw(3L, 30.0); 
-	} 
-	
-	@Test 
-	void initDeposit() {
-		bcd.initDeposit(4L, 1000);
+
+		abc.widthDraw(3L, 30.0);
 		
 	}
-	
-	@Test	
-	void getAccount() {
-	
-		bcd.getAccount(5L);
-	
+
+	@Test
+	void initDeposit() {
+		
+		bcd.initDeposit(4L, 1000);
+
 	}
+
+	@Test
+	void getAccount() {
+
+		bcd.getAccount(5L);
+
+	}
+
 	@Test
 	void updatePhoneNumber() {
-		
-	
-	bcd.updatePhone(1L, "1234567654");
-		
-		
+
+		bcd.updatePhone(1L, "1234567654");
+
 	}
-	
+
 	@Test
-	void updateEmail() { 
+	void updateEmail() {
 
 		bcd.updateEmail(2L, "no@gmail.com");
+		
 	}
-	
+
 	@Test
 	void updateFirstName() {
-	
+
 		bcd.updateFirstName(3L, "Ashanti");
+		
 	}
-	
+
 	@Test
 	void updateLastName() {
-		
+
 		bcd.updateLastName(3L, "Blount");
-	}
 		
+	}
+
 }

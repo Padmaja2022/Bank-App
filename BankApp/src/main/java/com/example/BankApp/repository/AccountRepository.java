@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import com.example.BankApp.model.Accounts;
 
-@Repository 
+@Repository
 
 public interface AccountRepository extends JpaRepository<Accounts, Long> {
 
