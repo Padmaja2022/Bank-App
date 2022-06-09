@@ -1,8 +1,8 @@
 <div class="middle">
-  <h2>Good afternoon, {{ mainService.accounts.firstName }}</h2>
+  <h2>Good afternoon, {{ account.firstName }}</h2>
   <p class="meta">Total Balance</p>
   <div class="flex">
-    <h1>{{mainService.accounts.balance | currency: 'USD' }}</h1>
+    <h1>{{account.balance | currency: 'USD' }}</h1>
     <div class="duration">
 
       <select name="duration" class="month">

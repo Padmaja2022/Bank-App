@@ -1,0 +1,82 @@
+<div class="app">
+  <div class="navbar">
+    <a routerLink="landing-page/">
+      <img src="assets/home2.png" class="bill" />
+    </a>
+    <div class="whitespace"></div>
+    <a routerLink="dashboard/{{ account.id }}">
+      <img src="assets/zoom.png" class="bill" />
+    </a>
+    <div class="whitespace"></div>
+    <a routerLink="transactions/{{ account.id }}">
+      <img src="assets/bill.png" class="bill" />
+    </a>
+    <div class="whitespace"></div>
+    <div data-bs-toggle="modal" data-bs-target="#settings">
+      <img src="assets/settings.png" class="bill" />
+    </div>
+  </div>
+</div>
+
+<div
+      class="modal fade"
+      id="settings"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Log in</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="email">Account Id</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="email"
+                  placeholder="Enter account id"
+                  autocomplete="off"
+                  #id
+                />
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Password"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="form-group form-check">
+                <a routerLink="signUp">New User? Click here to sign up</a>
+              </div>
+              <div class="container">
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    (click)="getAccount(id.valueAsNumber)"
+                  >
+                    Log in
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>

@@ -5,34 +5,49 @@
           type="text"
           autocomplete="off"
           class="form-control"
+          [(ngModel)]="account.firstName"
+          id = "firstName"
+          name = "firstName"
         />
         <label for="lastName" class="form-label">Last name</label>
         <input
           type="text"
           autocomplete="off"
           class="form-control"
+          [(ngModel)]="account.lastName"
+          id = "lastName"
+          name = "lastName"
         />
         <label for="email" class="form-label">Email</label>
         <input
           type="text"
           autocomplete="off"
           class="form-control"
+          [(ngModel)]="account.email"
+          id = "email"
+          name = "email"
         />
         <label for="password" class="form-label">Password</label>
         <input
           type="text"
           autocomplete="off"
           class="form-control"
+          [(ngModel)]="account.password"
+          id = "password"
+          name = "password"
         />
         <label for="number" class="form-label">Phone Number</label>
         <input
           type="text"
           autocomplete="off"
           class="form-control"
+          [(ngModel)]="account.phoneNumber"
+          id = "phoneNumber"
+          name = "phoneNumber"
         />
     </div>
   
     <div class="modal-footer">
-      <button type="button" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary" (click)="createAccount()">Submit</button>
     </div>
   </form>

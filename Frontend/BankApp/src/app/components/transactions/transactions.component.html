@@ -10,10 +10,33 @@
     </div>
   </div>
   <table id="table">
+    <tr *ngFor="let transaction of transactions$ | async">
+      <td>
+        <div>
+          <p class="day">{{ transaction.dateOfTrans | date: 'MMM d' }}</p>
+          <p class="time">{{ transaction.dateOfTrans | date: 'shortTime' }}</p>
+        </div>
+      </td>
+      <td>
+        <div class="product">
+          <img src="assets/hdr.png" class="image" />
+          <div class="description">
+            <p class="productName">Name of Transaction Here</p>
+            <div class="meta">
+              <p>{{ transaction.type }} • Debit Card</p>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <p class="price">{{ transaction.amount | currency: 'USD'}}</p>
+      </td>
+    </tr>
+    
     <tr>
       <td>
         <div>
-          <p class="day">Today</p>
+          <p class="day">Jun 7</p>
           <p class="time">1:40 PM</p>
         </div>
       </td>
@@ -35,7 +58,7 @@
     <tr>
       <td>
         <div>
-          <p class="day">Today</p>
+          <p class="day">Jun 7</p>
           <p class="time">9:30 AM</p>
         </div>
       </td>
@@ -57,7 +80,7 @@
     <tr>
       <td>
         <div>
-          <p class="day">Yesterday</p>
+          <p class="day">Jun 6</p>
           <p class="time">2:00 PM</p>
         </div>
       </td>

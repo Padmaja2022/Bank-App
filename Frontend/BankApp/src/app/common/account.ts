@@ -1,5 +1,5 @@
 export class Account {
-    id!: string;
+    id!: number;
     firstName!: string;
     lastName!: string;
     email!: string;
@@ -7,4 +7,5 @@ export class Account {
     ssn!: string;
     accountNumber!: string;
     balance!: number;
+    password!: string;
 }

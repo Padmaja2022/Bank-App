@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MainService } from '../services/main.service';
+import { Output, EventEmitter } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-login',
@@ -8,16 +11,15 @@ import { MainService } from '../services/main.service';
 })
 export class LoginComponent implements OnInit {
 
+  @Output() accountId = new EventEmitter<number>();
+
   constructor(public mainService : MainService) { }
 
   ngOnInit(): void {
   }
 
-  login(id: number) {
-    this.mainService.getAccountById(id);
-    this.mainService.getTransactionsById(id);
-    console.log(id);
-  }
+
+
   
 
 }

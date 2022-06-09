@@ -1,37 +1,38 @@
 <div class="container">
   <div class="content">
-      <h2 class="text">{{ mainService.accounts.firstName }}'s Transactions</h2>
+      <h2 class="text">{{ account.firstName }}'s Transactions</h2>
     <table class="table table-striped">
       <tr>
         <th class="date">Date</th>
         <th class="name">Name</th>
         <th class="amount">Amount</th>
       </tr>
-      <tr *ngFor="let transaction of transactions">
+      <tr *ngFor="let transaction of transactions$ | async">
         <td>
           <div>
-            <p class="day">{{ transaction.date }}</p>
+            <p class="day">{{ transaction.dateOfTrans | date: 'MMM d' }}</p>
+            <p class="time">{{ transaction.dateOfTrans | date: 'shortTime' }}</p>
           </div>
         </td>
         <td>
           <div class="product">
             <img src="assets/hdr.png" class="image" />
             <div class="description">
-              <p class="productName">{{transaction.name}}</p>
+              <p class="productName">Name of Transaction Here</p>
               <div class="meta">
-                <p>{{transaction.category}}</p>
+                <p>{{ transaction.type }} • Debit Card</p>
               </div>
             </div>
           </div>
         </td>
         <td>
-          <p class="price">{{ transaction.amount | currency: 'USD' }}</p>
+          <p class="price">{{ transaction.amount | currency: 'USD'}}</p>
         </td>
       </tr>
       <tr>
         <td>
           <div>
-            <p class="day">Today</p>
+            <p class="day">Jun 7</p>
             <p class="time">1:40 PM</p>
           </div>
         </td>
@@ -53,7 +54,7 @@
       <tr>
         <td>
           <div>
-            <p class="day">Today</p>
+            <p class="day">Jun 7</p>
             <p class="time">9:30 AM</p>
           </div>
         </td>
@@ -75,7 +76,7 @@
       <tr>
         <td>
           <div>
-            <p class="day">Yesterday</p>
+            <p class="day">Jun 6</p>
             <p class="time">2:00 PM</p>
           </div>
         </td>
@@ -97,7 +98,7 @@
       <tr>
         <td>
           <div>
-            <p class="day">Yesterday</p>
+            <p class="day">Jun 5</p>
             <p class="time">11:00 PM</p>
           </div>
         </td>
@@ -119,7 +120,7 @@
       <tr>
         <td>
           <div>
-            <p class="day">Yesterday</p>
+            <p class="day">Jun 5</p>
             <p class="time">4:30 PM</p>
           </div>
         </td>
@@ -141,7 +142,7 @@
       <tr>
         <td>
           <div>
-            <p class="day">Yesterday</p>
+            <p class="day">Jun 4</p>
             <p class="time">4:15 PM</p>
           </div>
         </td>
@@ -163,7 +164,7 @@
       <tr>
         <td>
           <div>
-            <p class="day">Yesterday</p>
+            <p class="day">Jun 4</p>
             <p class="time">2:47 PM</p>
           </div>
         </td>
@@ -185,7 +186,7 @@
       <tr>
         <td>
           <div>
-            <p class="day">Yesterday</p>
+            <p class="day">Jun 4</p>
             <p class="time">12:00 PM</p>
           </div>
         </td>
@@ -207,7 +208,7 @@
       <tr>
         <td>
           <div>
-            <p class="day">Aug 29</p>
+            <p class="day">June 3</p>
             <p class="time">11:00 PM</p>
           </div>
         </td>

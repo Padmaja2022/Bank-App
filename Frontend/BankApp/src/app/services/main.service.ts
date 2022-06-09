@@ -19,15 +19,19 @@ export class MainService {
     constructor(private http: HttpClient) {}
 
     getTransactionsById(id: number): Observable<Transaction[]> {
-      return this.http.get<Transaction[]>(this.baseUrl + `transactions/get/transactions/${id}`);
+      return this.http.get<Transaction[]>(this.baseUrl + `transactions/get/transactions/${id}`)
     }
 
     getAccountById(id: number) {
-      return this.http.get<Account>(this.baseUrl + `accounts/gt/account/${id}`).subscribe(
-        res => {
-          this.accounts = res;
-          console.log(this.accounts);
-        }
-      )
+      return this.http.get<Account>(this.baseUrl + `accounts/gt/account/${id}`);
     }
+
+    createAccount(data : Account) {
+      return this.http.post(this.baseUrl + "accounts/newAcc", data).subscribe();
+    }
+  
+
+    //changeFirstName(id: number, newName: string) {
+      //return this.http.patch(this.baseUrl + `/firstname/${id}/${newName}`);
+    //}
 } 

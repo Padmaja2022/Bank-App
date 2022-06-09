@@ -15,13 +15,15 @@ import { LoginComponent } from './login/login.component';
 import { SettingsModalComponent } from './components/settings-modal/settings-modal.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent },
-  { path: 'dashboard', component: DashboardComponent },
+  { path: '', component: LandingPageComponent },
+  { path: 'dashboard/:id', component: DashboardComponent },
   { path: 'landing-page', component: LandingPageComponent },
-  { path: 'transactions', component: TransactionsListComponent },
+  { path: 'transactions/:id', component: TransactionsListComponent },
   { path: '**', redirectTo: '/', pathMatch: 'full' },
   {path:"", redirectTo:"login", pathMatch:"full" },
   { path:"login", component: LoginComponent },
@@ -40,12 +42,14 @@ const routes: Routes = [
     TransactionsListComponent,
     LoginComponent,
     SettingsModalComponent,
-    SignupComponent
+    SignupComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [MainService],
 

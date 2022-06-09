@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Account } from 'src/app/common/account';
+import { MainService } from 'src/app/services/main.service';
 
 @Component({
   selector: 'app-landingpage',
@@ -8,9 +10,21 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute) { }
+  account = new Account();
+  @Output() accountId = new EventEmitter<number>();
+
+
+  constructor(private route: ActivatedRoute,
+              public mainService: MainService) { }
 
   ngOnInit(): void {
+  }
+
+  login(id: number) {
+    this.accountId.emit(id);
+    //this.mainService.getTransactionsById(id);
+    console.log(id);
+    
   }
 
 }

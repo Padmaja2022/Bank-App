@@ -1,37 +1,4 @@
 
-<div class="app">
-  <div class="navbar">
-    <a routerLink="landing-page">
-      <img src="assets/home2.png" class="bill" />
-    </a>
-    <div class="whitespace"></div>
-    <a routerLink="dashboard">
-    <img src="assets/zoom.png" class="bill" />
-    </a>
-    <div class="whitespace"></div>
-    <a routerLink="transactions">
-    <img src="assets/bill.png" class="bill" />
-  </a>
-  <div class="whitespace"></div>
-    <div data-bs-toggle="modal" data-bs-target="#settings">
-    <img src="assets/settings.png" class="bill" />
-  </div>
-  <div class="whitespace"></div>
-  </div>
-  <router-outlet></router-outlet>
-</div>
+<app-navbar></app-navbar>
 
-<div class="modal fade" id="settings" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-aria-labelledby="staticBackdropLabel" aria-hidden="true">
-<div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Settings</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <app-settings-modal></app-settings-modal>
-        </div>
-    </div>
-</div>
-</div>
+<router-outlet></router-outlet>
