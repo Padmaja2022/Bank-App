@@ -1,14 +1,12 @@
 package com.example.BankApp.model;
 
-import java.time.LocalDate;
-//import java.time.LocalDateTime;
+
+import java.time.LocalDateTime;
 
 import javax.persistence.*;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
@@ -22,7 +20,6 @@ public class Transactions {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "trsid")
-
 	private long id;
 
 	@Column(name = "amount")
@@ -32,21 +29,25 @@ public class Transactions {
 	private String type;
 
 	@Column(name = "date_of_trans")
-	private LocalDate dateOfTrans;
+	private LocalDateTime dateOfTrans;
 
 	@Column(name = "account")
 	private Long account;
-
+	
+	@Column(name = "transactionName")
+	private String transactionName;
+	
 	public Transactions() {
-		this.dateOfTrans = LocalDate.now();
+		this.dateOfTrans = LocalDateTime.now();
 	}
 
-	public Transactions(double amount, String type, long account) {
+	public Transactions(double amount, String type, long account, String transactionName) {
 		
 		this.amount = amount;
 		this.type = type;
 		this.account = account;
-		this.dateOfTrans = LocalDate.now();
+		this.transactionName = transactionName;
+		this.dateOfTrans = LocalDateTime.now();
 		
 	}
 }

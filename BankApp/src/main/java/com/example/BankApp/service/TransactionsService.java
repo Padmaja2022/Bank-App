@@ -34,9 +34,9 @@ public class TransactionsService {
 	}
 
 	// deposit
-	public Transactions deposit(Long Id, double amount) {
+	public Transactions deposit(Long Id, double amount, String transactionName) {
 		
-		Transactions trans = new Transactions(amount, "deposit", Id);
+		Transactions trans = new Transactions(amount, "Deposit", Id, transactionName);
 		createTransaction(trans);
 		Accounts acc = AccountRepo.findById(Id).get();
 		acc.setBalance(acc.getBalance() + amount);
@@ -55,9 +55,9 @@ public class TransactionsService {
 	}
 
 	// widthdraw
-	public Transactions widthDraw(Long Id, double amount) {
+	public Transactions widthDraw(Long Id, double amount, String transactionName) {
 		
-		Transactions trans = new Transactions(amount, "withdraw", Id);
+		Transactions trans = new Transactions(amount, "Withdraw", Id, transactionName);
 		createTransaction(trans);
 		Accounts acc = AccountRepo.findById(Id).get();
 		acc.setBalance(acc.getBalance() - amount);
