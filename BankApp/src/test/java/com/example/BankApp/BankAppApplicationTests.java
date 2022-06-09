@@ -26,7 +26,7 @@ class BankAppApplicationTests {
 	@Test
 	void makeDeposit() {
 
-		abc.deposit(1L, 50.0);
+		abc.deposit(1L, 50.0, null);
 
 	}
 
@@ -40,7 +40,7 @@ class BankAppApplicationTests {
 	@Test
 	void makeWidthDraw() {
 
-		abc.widthDraw(3L, 30.0);
+		abc.widthDraw(3L, 30.0, null);
 		
 	}
 

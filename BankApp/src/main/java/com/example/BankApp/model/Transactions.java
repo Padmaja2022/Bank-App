@@ -34,7 +34,7 @@ public class Transactions {
 	@Column(name = "account")
 	private Long account;
 	
-	@Column(name = "transactionName")
+	@Column(name = "transaction_Name")
 	private String transactionName;
 	
 	public Transactions() {
