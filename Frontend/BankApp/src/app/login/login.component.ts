@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MainService } from '../services/main.service';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(public mainService : MainService) { }
 
   ngOnInit(): void {
   }
+
+  login(id: number) {
+    this.mainService.getAccountById(id);
+    this.mainService.getTransactionsById(id);
+    console.log(id);
+  }
+  
 
 }

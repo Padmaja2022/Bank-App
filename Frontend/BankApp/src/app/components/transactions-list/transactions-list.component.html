@@ -1,18 +1,6 @@
 <div class="container">
   <div class="content">
-    <div class="flexer">
-      <h2 class="text">Transactions</h2>
-      <div class="form-header">
-        <input
-          #myInput
-          type="text"
-          placeholder="Search your transactions"
-          class="search"
-          (keyup.enter)="doSearch(myInput.value)"
-        />
-        <button (click)="doSearch(myInput.value)" class="submit">Search</button>
-      </div>
-    </div>
+      <h2 class="text">{{ mainService.accounts.firstName }}'s Transactions</h2>
     <table class="table table-striped">
       <tr>
         <th class="date">Date</th>

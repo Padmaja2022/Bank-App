@@ -1,8 +1,6 @@
 export class Transaction {
-    accountId!: string;
-    date!: Date;
-    purchase!: string;
-    category!: string;
+    id!: string;
     amount!: number;
-    name!: string;
+    dateOfTrans!: Date;
+    type!: string;
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MainService } from 'src/app/services/main.service';
 
 @Component({
   selector: 'app-profile',
@@ -7,15 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  constructor(public mainService: MainService) { }
 
   ngOnInit(): void {
-  }
-
-  visible:boolean = false;
-
-  show () {
-    this.visible = this.visible?false:true;
   }
 
 }

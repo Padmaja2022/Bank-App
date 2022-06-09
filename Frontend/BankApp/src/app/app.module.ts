@@ -6,7 +6,7 @@ import { CardComponent } from './components/card/card.component';
 import { TransactionsComponent } from './components/transactions/transactions.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ProfileDataComponent } from './components/profile-data/profile-data.component';
-import {Routes, RouterModule} from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { LandingPageComponent } from './components/landing-page/landingpage.component';
 import { MainService } from './services/main.service';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -14,6 +14,7 @@ import { TransactionsListComponent } from './components/transactions-list/transa
 import { LoginComponent } from './login/login.component';
 import { SettingsModalComponent } from './components/settings-modal/settings-modal.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 const routes: Routes = [
@@ -39,11 +40,12 @@ const routes: Routes = [
     TransactionsListComponent,
     LoginComponent,
     SettingsModalComponent,
-    SignupComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   providers: [MainService],
 

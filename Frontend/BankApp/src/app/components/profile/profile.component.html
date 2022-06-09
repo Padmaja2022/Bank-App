@@ -8,8 +8,8 @@
   </div>
   <div class="profile">
     <img src="assets/profile.png" class="picture" />
-    <h3 class="name">John Smith</h3>
-    <p class="email">jsmith@gmail.com</p>
+    <h3 class="name">{{ mainService.accounts.firstName }} {{ mainService.accounts.lastName }}</h3>
+    <p class="email">{{ mainService.accounts.email }}</p>
   </div>
 
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"

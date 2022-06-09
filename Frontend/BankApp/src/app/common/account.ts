@@ -1,7 +1,10 @@
 export class Account {
-    accountId!: string;
+    id!: string;
     firstName!: string;
     lastName!: string;
     email!: string;
-    number!: string;
+    phoneNumber!: string;
+    ssn!: string;
+    accountNumber!: string;
+    balance!: number;
 }

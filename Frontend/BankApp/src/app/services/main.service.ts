@@ -10,5 +10,24 @@ import { Transaction } from '../common/transaction';
 
 export class MainService {
 
+    accounts = new Account();
 
-}
+    transactions: Transaction[] = new Array<Transaction>()
+
+    private baseUrl: string = 'http://localhost:8080/'
+  
+    constructor(private http: HttpClient) {}
+
+    getTransactionsById(id: number): Observable<Transaction[]> {
+      return this.http.get<Transaction[]>(this.baseUrl + `transactions/get/transactions/${id}`);
+    }
+
+    getAccountById(id: number) {
+      return this.http.get<Account>(this.baseUrl + `accounts/gt/account/${id}`).subscribe(
+        res => {
+          this.accounts = res;
+          console.log(this.accounts);
+        }
+      )
+    }
+} 
